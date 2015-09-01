@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Appetizer Week 4</title>
+</head>
+<body>
+  <script>
+
+  findLongestWord(['hello', 'bye', 'farewell']);
+  findLongestWord(['eye', 'bye']);
+  findLongestWord(['so long', 'hello', 'mississippi']);
+
+  function findLongestWord(arr1) {
+    var longest = 0;
+    for (var i = 0; i < arr1.length; i++) {
+        if (longest < arr1[i].length) {
+            longest = arr1[i].length;
+            result = arr1[i];
+        }
+    }
+    return result;
+  } 
+  // test it out
+  findLongestWord(['one','two','three']));   
+  findLongestWord(['hello','bye','farewell']);
+  findLongestWord(['eye','why'])
+  findLongestWord(['pina colada','watermelon','raspberry'])
+
+
+  // with multiple arrays in an array
+  var arrays = [
+      ['this', 'that', 'derp'],
+      ['bob', 'linda', 'gene', 'louise', 'tina'],
+      [],
+      ['apples', 'oranges', 'fruits']
+    ];
+
+    var array, longest, moarArrays, longestWords = [];
+
+    for (var i = 0; i < arrays.length; i++) {
+      array = arrays[i];
+      longest = '';
+
+      for (var j = 0; j < array.length; j++) {
+        if (array[j].length >= longest.length) {
+          longest = array[j];
+        }
+      }
+      // get all the words that match the condition
+      longestWords.push(longest);
+    }
+    // test it out
+    console.log(longestWords);
+
+  </script>
+</body>
+</html>
