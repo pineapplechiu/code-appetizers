@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myUL">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click the button to change "coffee" into "tea"</p>
+
+<button onclick="myFunction()">Button 1</button>
+<button onclick="addItem()">Button 2</button>
+
+<script>
+// Write your two functions below, follow the steps
+// 1. Write a function called "myFunction". With this function, every time you click "Button 1",  "coffee" will be changed into "milk"
+function myFunction() {
+    // first, try to get the first element in the unordered list
+    var myElement = document.getElementsByTagName('li')[0];
+    
+    // second, set the HTML of the target element into "milk"
+    myElement.innerHTML="milk";
+    
+}
+// 2.Bonus: Write a function called "addItem". With this function, every time you click the second button, one more item will be added after "tea"
+function addItem(){
+    //first, create a new element "li"
+    var newElement = document.createElement("li");
+    
+    //then, set the HTML of the new item
+    newElement.innerHTML="cookies";
+    
+    //finally, append this element to its parent
+    var myList = document.getElementById('myUL');
+    myList.appendChild(newElement);
+    
+}
+</script>
+
+</body>
+</html>
