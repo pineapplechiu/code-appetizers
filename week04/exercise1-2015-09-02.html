@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+    <title>Invoke a function</title>
+    
+</head>
+<body>
+
+    <input type="checkbox" id="myBox" onmouseover="myFunction(this)" onchange="alert('Hello')">
+    <label>Fire me!</label>
+</body>
+</html>
+
+<script>
+// 1. Finish myFunction here. When you mouse-over the checkbox on the page, myFunction can get the box checked.
+// 2. Use in-line style to invoke myFunction. 
+// 3. Bonus: When the box is checked, pop out an alert box  
+function myFunction() {
+    var check = document.getElementById('myBox');
+    check.click();   
+}
+
+// function isChecked() {
+//     if (check.checked = true) {
+
+//     }
+// }
+</script>
