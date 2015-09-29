@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hackbright Front End Demo Day</title>
+    <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+  </head>
+  <body>
+    <div class="signup">
+      <h2 class="signup-title">Sign up for Frontend Demo Day</h2>
+        <form class="signup-form form-inline" id="signup-form" role="form" onsubmit="return signup(this)">
+          <input class="form-control" name="email" type="email" placeholder="Your email" required>
+          <button class="btn btn-success" id="signup-button" type="submit" >RSVP</button>
+      </form>
+    </div>
+    <script>
+    var myFirebaseRef = new Firebase("https://vivid-heat-522.firebaseio.com/");
+      function signup(formObj) {
+        // Do something here 
+        console.log(formObj);
+        myFirebaseRef.push({email: formObj.email.value});
+        return false;
+    }
+  </script>
+  </body>
+</html>
+
+<!-- myFirebaseRef.set({
+  title: "Hello World!",
+  author: "Firebase",
+  location: {
+    city: "San Francisco",
+    state: "California",
+    zip: 94103
+  }
+});
+
+
+ -->
