@@ -8,5 +8,13 @@
   <input type="checkbox" name="vehicle" value="Both">Select all<br>
   <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
   <input type="checkbox" name="vehicle" value="Car">I have a car<br>
+
+<script>
+  $("input[value='Both']").click(function(){
+   //write your code here
+   $('input').prop('checked',$(this).prop('checked'));
+  });
+</script>
+
 </body>
 </html>
