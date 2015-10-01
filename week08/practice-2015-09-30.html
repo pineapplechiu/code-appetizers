@@ -8,7 +8,7 @@
 <body>
   <h2>Random Password Generator</h2>
   <p>Desired password length:
-  <input type='number' id='password-length' min='1' max='16'>
+    <input type='number' id='password-length' min='1' max='16'>
     <button id='submit-btn'>Generate Password</button>
   </p>
   <div id='password'></div>
@@ -18,6 +18,15 @@
     $(document).ready(function() {
       $('#submit-btn').click(function() {
         //do something here
+        var lenVal = $('#password-length').val();
+        var chars = '01234567890abcdefghijklmnopqrstuvwxyz!?';
+        var password = '';
+        for (var i=1; i <= lenVal; i++) {
+          var randomIdx = Math.floor(Math.random() * chars.length);
+          var randomChar = chars[randomIdx];
+          password += randomChar;
+        }
+      $('#password').text(password);
       })
     });  
   </script>
