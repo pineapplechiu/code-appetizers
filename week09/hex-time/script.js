@@ -6,15 +6,15 @@ $(document).ready(function() {
     var s = d.getSeconds();
     
     if (parseInt(d.getMinutes()) < 10) {
-      minutes = "0" + d.getMinutes();
+      m = "0" + d.getMinutes();
     } else {
-      minutes = d.getMinutes();
+      m = d.getMinutes();
     }
 
     if (parseInt(d.getSeconds()) < 10) {
-      seconds = "0" + d.getSeconds();
+      s = "0" + d.getSeconds();
     } else {
-      seconds = d.getSeconds();
+      s = d.getSeconds();
     }
 
     var color = "#" + h + m + s;
