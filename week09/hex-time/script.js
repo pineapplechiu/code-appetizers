@@ -3,23 +3,26 @@ $(document).ready(function() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
-    if (m < 10) {
-        m = "0"+m;
-    };
     var s = d.getSeconds();
-    if (s < 10) {
-        s = "0"+s;
-    };
-    var timeNow = h+":"+m+":"+s;
-    var color = timeNow.replace(/:/g, "");
-    $('#color').val(color);
-    $('#time').val(timeNow);
-    $('.wrap').attr('background-color', '#'+color);
-    console.log($('#color'));
-    console.log(m);
+    
+    if (parseInt(d.getMinutes()) < 10) {
+      minutes = "0" + d.getMinutes();
+    } else {
+      minutes = d.getMinutes();
+    }
 
-    $("body").css("background-color", color);
-    $("#color").html(color);
+    if (parseInt(d.getSeconds()) < 10) {
+      seconds = "0" + d.getSeconds();
+    } else {
+      seconds = d.getSeconds();
+    }
+
+    var color = "#" + h + m + s;
+    var clock = h + ":" + m + ":" + s
+
+    $("#time").text(clock)
+    $("#color").text(color)
+    $("body").css("background", color)
 
   }, 1000);
 

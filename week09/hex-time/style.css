@@ -11,8 +11,8 @@ html, body{
   line-height: 200px;
   font-size: 50px;
   text-align: center;
-  /*color: #fff;*/
-  color: #000;
+  color: #fff;
+  /*color: #000;*/
   text-shadow: 1 1 0 0 #000;
   font-family: Arial, Helvetica Neue;
 }
